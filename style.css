@@ -1,0 +1,281 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --ff-title : guillon;
+    --ff-texte : inter;
+    --box-shadow : 2px 3px 9px 0px rgba(46, 50, 50, 0.58);
+    --clr-blue : #4464fc;
+    --clr-grey : #e2e3e8;
+    --clr-dark-grey : #9fa3af;   
+}
+
+
+/*input{
+  outline: none;
+}*/
+
+body{
+    background-color: var(--clr-grey);
+}
+
+
+/** Typography **/
+
+h1,h2{
+    font-family: var(--ff-title);
+}
+
+
+p{
+    font-family: var(--ff-texte);
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+text-align: center;}
+
+/******************* container ******************/
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/****************** header *********************/
+
+header{
+    text-align: center;
+    background-color: #002F35;
+    color: white;
+    padding: 2em;
+}
+
+.header-title{
+    font-size: 3em;
+}
+
+.header-paragraph{
+    font-size: 1.3em;
+}
+
+/****************** cards ***********************/
+
+.card-container{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    grid-gap: 2em;
+    padding: 1em;
+    margin: 0 auto;
+}
+
+
+.card{
+    
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    height: 450px;
+    position: relative;
+    max-width: 450px;
+    border-radius: 10px;
+    border: none;
+    background-color: #e2e3e8;
+    box-shadow: var(--box-shadow);
+    background-color: white;
+
+}
+
+
+.card-header{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: white;
+    border-radius : 10px 10px 0 0;
+    width: 95%;
+    align-self: center;
+    margin: 0.5em;
+    padding-bottom: 1em;
+    background-color: var(--clr-blue);
+
+}
+
+.cancel-Icon{
+    width: 2em;
+    justify-self: center;
+    position: absolute;
+    right: 1.2em;
+    margin-top: 0.7em
+}
+
+
+.card-title{
+    font-size: 1.1em;
+    margin-top: 1.2em;
+    font-family: montserrat;
+}
+
+.card-title-input{
+    padding: 1.1em;
+    border-radius: 5px; 
+    background-color: var(--clr-blue);
+    border: none;
+    margin-top: 1em;
+    color: white;
+
+
+    
+}::placeholder{
+    
+    color: white;
+    font-size: 1.6em;
+    text-align: center;
+    border-bottom: 0.1em solid;
+    
+}
+
+
+
+.card-input{
+    position: absolute;
+    bottom: 0;
+    width: 60%;
+    padding: 1.1em;
+    border-radius: 7px;
+    border: none;
+    margin: 1em;
+    box-shadow: var(--box-shadow);
+    align-self: center;
+    outline: none;
+    right: 9em;
+
+}
+
+.submit-btn{
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    padding: 1.1em;
+    border-radius: 7px;
+    border: none;
+    margin: 1em;
+    box-shadow: var(--box-shadow);
+    outline: none;
+    right: 1.2em;
+}
+
+.card-list-container{
+    width: 95%;
+    height: 290px;
+    overflow: auto;
+    background-color: white;
+    align-self: center;
+
+
+}::-webkit-scrollbar {
+     background: #EEEEEEEE; 
+     width: 0.5em; 
+}
+
+::-webkit-scrollbar-thumb{
+    background: black;
+    border-radius: 5px;
+}
+
+.card-list{
+    display: flex;
+    flex-direction: column;
+}
+
+/********** Task Item *********/
+
+.card-list-item{
+    padding: 1px;
+    margin: 10px;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    padding: 1em 0.6em;
+    position: relative;
+}
+
+.fa-check-circle{
+    position:absolute;
+    left: 0.6em;
+}
+
+.fa-circle{
+    position:absolute;
+    left: 0.6em;
+}
+
+.fa-trash-alt{
+    position: absolute;
+    right: 0.3em;
+}
+
+.fa-edit{
+    position: absolute;
+    right: 1.4em;
+}
+
+.paragraph{
+    position: absolute;
+    left: 5.2em;
+}
+
+.linethrough{
+    text-decoration: line-through;
+}
+
+
+.plus-button-img{
+    width: 50px;
+    height: 50px;
+    justify-self: center;
+    cursor: pointer;
+}
+
+
+.cancel-Icon:hover{
+    background-color: white;
+    border-radius: 50%;
+}
+
+/***** alert *****/
+
+.alert{
+    border: solid black;
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1em;
+    border: none;
+    padding: 0.1px
+}
+
+.alert-title{
+    font-size: 1.1em;
+}
+
+.alert-danger{
+   background-color: #FC6767;
+    color: #333333;
+}
+
+.alert-success{
+    background-color: #48BB78;
+    color: #333333; 
+}
+
+
+
